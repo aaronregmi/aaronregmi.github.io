@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run 3</title>
+    <script src="ruffle.js"></script>
+</head>
+<body style="background:#000; display:flex; justify-content:center; align-items:center; height:100vh;">
 
+    <div id="game-container"></div>
+
+    <script>
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        document.getElementById("game-container").appendChild(player);
+        player.load("raftwars.swf");
+    </script>
+
+</body>
+</html>
