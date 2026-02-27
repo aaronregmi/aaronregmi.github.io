@@ -3,35 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aaronregmi.github.io</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Aaron Regmi Games</title>
+    <style>
+        /* --- Reset / body --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* --- Header / hero --- */
+        header {
+            background: linear-gradient(90deg, #ff4d4d, #ff9900);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #eee;
+        }
+
+        /* --- Category section --- */
+        .category {
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .category h2 {
+            margin-bottom: 15px;
+            font-size: 2em;
+            border-left: 5px solid #ff9900;
+            padding-left: 10px;
+        }
+
+        /* --- Horizontal scroll container --- */
+        .game-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 10px;
+        }
+
+        .game-row::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .game-row::-webkit-scrollbar-thumb {
+            background: #ff9900;
+            border-radius: 4px;
+        }
+
+        .game-card {
+            min-width: 150px;
+            flex: 0 0 auto;
+            background: #222;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.1);
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .game-card a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>aaronregmi.github.io!</h1>
-        <p>Fun and games!</p>
+        <h1>AaronRegmi Games</h1>
+        <p>Scroll down to explore all your favorite games!</p>
     </header>
 
-    <section class="games-container">
-        <!-- Add game cards here -->
-        <div class="game-card">
-            <h2>Game Title</h2>
-            <p>Small description here</p>
-            <a href="#">Play</a>
+    <!-- Category: Flash -->
+    <section class="category">
+        <h2>Flash Games</h2>
+        <div class="game-row">
+            <div class="game-card">
+                <a href="/flash/raftwars/">
+                    <img src="/images/raftwars-icon.png" alt="Raft Wars">
+                    Raft Wars
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="/flash/anothergame/">
+                    <img src="/images/anothergame-icon.png" alt="Another Game">
+                    Another Game
+                </a>
+            </div>
+            <!-- Add more games here -->
         </div>
+    </section>
 
-        <div class="game-card">
-            <h2>Another Game</h2>
-            <p>Another description</p>
-            <a href="#">Play</a>
+    <!-- Category: HTML5 -->
+    <section class="category">
+        <h2>HTML5 Games</h2>
+        <div class="game-row">
+            <div class="game-card">
+                <a href="/html/run3/">
+                    <img src="/images/run3-icon.png" alt="Run 3">
+                    Run 3
+                </a>
+            </div>
+            <!-- Add more HTML5 games here -->
         </div>
-
-        <div class="game-card">
-            <h3>Run 3</h3>
-            <a href="/html/run3.html">Play</a>
-        </div>
-        
     </section>
 
 </body>
