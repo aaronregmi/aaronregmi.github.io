@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Earn To Die</title>
+    <script src="ruffle.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #player {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
 
+    <script>
+        // Loads Ruffle
+        window.RufflePlayer = window.RufflePlayer || {};
+
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        document.getElementById("player").appendChild(player);
+
+        // Load the SWF file
+        player.load("74774.swf");
+    </script>
+</body>
+</html>
