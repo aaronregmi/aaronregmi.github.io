@@ -2,7 +2,24 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Fireboy & Watergirl 2 - The Light Temple</title>
+<link id="dynamic-favicon" rel="icon" type="image/png" href="/images/arlogo.png">
+
+<script>
+function applyBrandMode() {
+    const mode = localStorage.getItem("brandMode") || "normal";
+    const favicon = document.getElementById("dynamic-favicon");
+
+    if (mode === "alt") {
+        document.title = "Melbourne High School";
+        favicon.href = "/images/mhs-icon.png";
+    } else {
+        document.title = "Fireboy & Watergirl 2 - The Light Temple";
+        favicon.href = "/images/arlogo.png";
+    }
+}
+
+applyBrandMode();
+</script>
     <script src="ruffle.js"></script>
     <style>
         html, body {
