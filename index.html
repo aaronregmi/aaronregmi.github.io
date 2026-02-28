@@ -130,7 +130,20 @@ applyBrandMode();
     </label>
 
     <!-- rest of homepage content -->
+<script>
+const toggle = document.getElementById("brand-toggle");
 
+// Set initial toggle state
+toggle.checked = (localStorage.getItem("brandMode") === "alt");
+
+// Toggle behaviour
+toggle.onchange = () => {
+    const newMode = toggle.checked ? "alt" : "normal";
+    localStorage.setItem("brandMode", newMode);
+    applyBrandMode(); // updates favicon/title instantly
+};
+</script>
+    
 </body>
     <!-- Category: Flash -->
     <section class="category">
