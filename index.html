@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link id="dynamic-favicon" rel="icon" type="image/png" href="/assets/icon-normal.png">
+
+<script>
+function applyBrandMode() {
+    const mode = localStorage.getItem("brandMode") || "normal";
+    const favicon = document.getElementById("dynamic-favicon");
+
+    if (mode === "alt") {
+        document.title = "Melbourne High School";            // your alt title
+        favicon.href = "/images/mhs-icon.png";       // your alt icon
+    } else {
+        document.title = "Aaron Regmi Games";           // your normal title
+        favicon.href = "/assets/arlogo.png";    // your normal icon
+    }
+}
+
+// Run on page load
+applyBrandMode();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Regmi Games</title>
     <style>
         /* --- Reset / body --- */
         * {
