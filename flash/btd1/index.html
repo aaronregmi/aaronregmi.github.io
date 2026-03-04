@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- DYNAMIC TITLE + FAVICON -->
+    <link id="dynamic-favicon" rel="icon" type="image/png" href="/images/arlogo.png">
+    <script>
+    function applyBrandMode() {
+        const mode = localStorage.getItem("brandMode") || "normal";
+        const favicon = document.getElementById("dynamic-favicon");
+
+        if (mode === "alt") {
+            document.title = "Home - Melbourne High School";
+            favicon.href = "/images/mhs-icon.png";
+        } else {
+            document.title = "Bloons Tower Defense";
+            favicon.href = "/images/arlogo.png";
+        }
+    }
+    applyBrandMode();
+    </script>
+
+
+    <script src="ruffle.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #player {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
+
+    <script>
+        // Loads Ruffle
+        window.RufflePlayer = window.RufflePlayer || {};
+
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        document.getElementById("player").appendChild(player);
+
+        // Load the SWF file
+        player.load("bloonstd1.swf");
+        
+        // Force full scaling
+        player.style.width = "100%";
+        player.style.height = "100%";
+        player.style.maxWidth = "none";
+        player.style.maxHeight = "none";
+    </script>
+</body>
+</html>
