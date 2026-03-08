@@ -33,6 +33,12 @@ header {
     transform: scale(1.05);
 }
 
+.game-row {
+    display: flex;
+    flex-wrap: wrap;          /* allows icons to move to next line */
+    gap: 15px;
+}
+
 .game-card a {
     display: inline-block;
     margin-top: 10px;
