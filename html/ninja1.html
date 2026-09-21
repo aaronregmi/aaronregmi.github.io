@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link id="dynamic-favicon" rel="icon" type="image/png" href="/images/arlogo.png">
+
+    <script>
+        function applyBrandMode() {
+            const mode = localStorage.getItem("brandMode") || "normal";
+            const favicon = document.getElementById("dynamic-favicon");
+
+            if (mode === "alt") {
+                document.title = "Home - Melbourne High School";
+                favicon.href = "/images/mhs-icon.png";
+            } else {
+                document.title = "The Ninja";
+                favicon.href = "/images/arlogo.png";
+            }
+        }
+
+        applyBrandMode();
+    </script>
+
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe
+        src="https://turbowarp.org/22620682/embed"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
